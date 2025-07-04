@@ -2,7 +2,7 @@ import { Download, ExternalLink } from "lucide-react";
 import { FaLinkedin, FaGithub, FaKaggle, FaEnvelope } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { smoothScrollTo } from "@/lib/smooth-scroll";
-
+import profileImage from '../images/niyanthri.jpg';
 export default function Hero() {
   const handleDownloadResume = () => {
     // In a real implementation, this would trigger a file download
@@ -20,17 +20,18 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Hi, I'm <span className="text-accent">Alex Chen</span>
+                Hi, I'm <span className="text-accent">Niyanthri R Sridhar</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-secondary font-medium">
-                Data Science Student & Machine Learning Enthusiast
+                Data Science Student & Design Enthusiast
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                4th year Computer Science student specializing in Data Science at UC Berkeley. 
-                Passionate about turning data into actionable insights and building intelligent systems.
+                4th year Computer Science student specializing in Data Science
+                at RV University. Passionate about turning data into actionable
+                insights and building intelligent systems.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={handleDownloadResume}
@@ -53,28 +54,28 @@ export default function Hero() {
 
             <div className="flex space-x-6">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/niyanthri-r-sridhar/"
                 className="text-gray-600 hover:text-accent transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Niyanthri24"
                 className="text-gray-600 hover:text-accent transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://kaggle.com"
+                href="https://www.kaggle.com/niyanthrirs"
                 className="text-gray-600 hover:text-accent transition-colors duration-200"
                 aria-label="Kaggle"
               >
                 <FaKaggle size={24} />
               </a>
               <a
-                href="mailto:alex.chen@berkeley.edu"
+                href="mailto:niyanthrirs@gmail.com"
                 className="text-gray-600 hover:text-accent transition-colors duration-200"
                 aria-label="Email"
               >
@@ -85,8 +86,8 @@ export default function Hero() {
 
           <div className="flex justify-center lg:justify-end">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
-              alt="Alex Chen professional headshot"
+              src={profileImage}
+              alt="Niyanthri R Sridhar"
               className="w-80 h-80 rounded-full shadow-2xl object-cover border-8 border-white"
             />
           </div>

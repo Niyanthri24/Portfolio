@@ -12,7 +12,7 @@ import ScrollToTop from "@/components/scroll-to-top";
 export default function Home() {
   useEffect(() => {
     // Set page title
-    document.title = "Alex Chen - Data Science Portfolio";
+    document.title = "Niyanthri - Data Science Portfolio";
   }, []);
 
   return (

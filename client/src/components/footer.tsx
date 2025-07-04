@@ -19,9 +19,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Alex Chen</h3>
+            <h3 className="text-xl font-bold mb-4">Niyanthri R Sridhar</h3>
             <p className="text-gray-300">
-              Data Science student passionate about using technology to solve real-world problems.
+              Data Science student passionate about using technology to solve
+              real-world problems.
             </p>
           </div>
 
@@ -45,28 +46,28 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/niyanthri-r-sridhar/"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Niyanthri24"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
               </a>
               <a
-                href="https://kaggle.com"
+                href="https://www.kaggle.com/niyanthrirs"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
                 aria-label="Kaggle"
               >
                 <FaKaggle size={20} />
               </a>
               <a
-                href="mailto:alex.chen@berkeley.edu"
+                href="mailto:niyanthrirs@gmail.com"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
@@ -77,7 +78,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+          <p>&copy; 2025 Niyanthri R Sridhar. All rights reserved.</p>
         </div>
       </div>
     </footer>

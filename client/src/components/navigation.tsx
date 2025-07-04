@@ -15,7 +15,14 @@ const navItems = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const activeSection = useScrollSpy(["home", "about", "projects", "skills", "experience", "contact"]);
+  const activeSection = useScrollSpy([
+    "home",
+    "about",
+    "projects",
+    "skills",
+    "experience",
+    "contact",
+  ]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +41,18 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-white/90 backdrop-blur-sm"
+        isScrolled
+          ? "bg-white/95 backdrop-blur-sm shadow-md"
+          : "bg-white/90 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary">Alex Chen</h1>
+            <h1 className="text-xl font-bold text-primary">
+              Niyanthri R Sridhar
+            </h1>
           </div>
 
           {/* Desktop Navigation */}

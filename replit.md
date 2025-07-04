@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern full-stack web application serving as a personal portfolio for Alex Chen, a 4th year Data Science student at UC Berkeley. The application features a responsive, single-page design showcasing projects, skills, experience, and contact information with smooth scrolling navigation and interactive components.
+This is a modern full-stack web application serving as a personal portfolio for Niyanthri R Sridhar, a 4th year Data Science student at RV University. The application features a responsive, single-page design showcasing projects, skills, experience, and contact information with smooth scrolling navigation and interactive components.
 
 ## System Architecture
 

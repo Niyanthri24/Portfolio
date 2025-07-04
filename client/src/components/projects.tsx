@@ -6,44 +6,54 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     title: "Brain Tumor Detection",
-    description: "CNN-based model for detecting and classifying brain tumors from MRI scans with 94% accuracy.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    technologies: ["TensorFlow", "OpenCV", "Python"],
+    description:
+      "CNN-based model for detecting and classifying brain tumors from MRI scans with 94% accuracy.",
+    image:
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    technologies: ["TensorFlow", "OpenCV", "Streamlit"],
     categories: ["ml", "cv"],
   },
   {
-    title: "Social Media Sentiment Analysis",
-    description: "Real-time sentiment analysis of Twitter data using BERT and interactive dashboard.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    technologies: ["BERT", "Streamlit", "Twitter API"],
+    title: "Youtube Comments Sentiment Analysis",
+    description: "Sentiment analysis of Youtube Comments using BERT and viz.",
+    image:
+      "https://cdn.prod.website-files.com/614c82ed388d53640613982e/64f7989c55786e5b4de9b9cb_sentiment-analysis-explained.webp",
+    technologies: ["BERT", "Streamlit", "Visuals"],
     categories: ["nlp", "ml"],
   },
   {
-    title: "Stock Market Prediction",
-    description: "LSTM neural network for predicting stock prices with interactive D3.js visualizations.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    technologies: ["LSTM", "D3.js", "Pandas"],
+    title: "Spam Email Classification",
+    description:
+      "This project presents a machine learning-based solution to classify emails as spam or non-spam using Logistic Regression and Random Forest classifiers. It aims to enhance email productivity and security by filtering unwanted emails with high precision and recall.",
+    image:
+      "https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img/https://www.inboxally.com/wp-content/uploads/2024/09/a-computer-screen-filled-with-spam-warnings-and-alerts.png",
+    technologies: ["Scikit", "BOW", "ROC"],
+    categories: ["nlp"],
+  },
+  {
+    title: "IPL Score Prediction",
+    description:
+      "This project focuses on predicting the total runs scored by a batting team in an Indian Premier League (IPL) cricket match using Linear Regression. The aim is to build a machine learning model that uses historical match data and relevant features to forecast match scores accurately.",
+    image: "https://documents.iplt20.com/bcci/articles/1742574837_Website.png",
+    technologies: ["Scikit", "Python", "FeatureEngineering"],
+    categories: ["ml"],
+  },
+  {
+    title: "Weather Data Collection Data Pipeline",
+    description:
+      " The pipeline fetches weather metrics from a public API, transforms and cleans the data, stores it for historical tracking, and triggers real-time alerts for extreme conditions.",
+    image:
+      "https://wmo.int/sites/default/files/2023-06/MicrosoftTeams-image%20%2817%29.png",
+    technologies: ["Python", "Databricks", "DeltaLake", "PySpark"],
     categories: ["viz", "ml"],
   },
   {
-    title: "Autonomous Vehicle Vision",
-    description: "Real-time object detection and lane recognition system for autonomous vehicles.",
-    image: "https://pixabay.com/get/g118bc768dab3fb2ac1167f7575df4dbfda0bbd401bd1bbeb7b2d5ca6c5365545c7c5a8661946fd5d35dcfb291ed269c85826ea7ff6ab1ed594d65e6deeedb2ee_1280.jpg",
-    technologies: ["YOLO", "OpenCV", "PyTorch"],
-    categories: ["cv", "ml"],
-  },
-  {
-    title: "Climate Data Explorer",
-    description: "Interactive visualization of global climate data with Plotly and Dash framework.",
-    image: "https://pixabay.com/get/g6526fa6e1fcedecc4ff97de32e5320eb45e4d400cd22bed501f88162bb9f95f2db976928ac2a8d9fa4327e77eae63903dcc9cd3054732db755a8450d3be3bb0b_1280.jpg",
-    technologies: ["Plotly", "Dash", "APIs"],
-    categories: ["viz"],
-  },
-  {
-    title: "News Article Classifier",
-    description: "Automated news categorization using transformer models and topic modeling.",
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    technologies: ["Transformers", "spaCy", "LDA"],
+    title: "Fake News Detection",
+    description:
+      "Automated news categorization using transformer models and topic modeling.",
+    image:
+      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    technologies: ["NLP", "TF-IDF", "ML"],
     categories: ["nlp"],
   },
 ];
@@ -58,7 +68,7 @@ const filters = [
 
 const technologyColors = {
   TensorFlow: "bg-blue-100 text-blue-800",
-  OpenCV: "bg-green-100 text-green-800",
+  OpenCV: "bg-yellow-100 text-yellow-800",
   Python: "bg-purple-100 text-purple-800",
   BERT: "bg-blue-100 text-blue-800",
   Streamlit: "bg-green-100 text-green-800",
@@ -74,22 +84,36 @@ const technologyColors = {
   Transformers: "bg-blue-100 text-blue-800",
   spaCy: "bg-green-100 text-green-800",
   LDA: "bg-purple-100 text-purple-800",
+  Databricks: "bg-blue-100 text-blue-800",
+  DeltaLake: "bg-yellow-100 text-yellow-800",
+  PySpark: "bg-green-100 text-green-800",
+  Scikit: "bg-red-100 text-red-800",
+  FeatureEngineering: "bg-blue-100 text-blue-800",
+  Visuals: "bg-yellow-100 text-yellow-800",
+  BOW: "bg-purple-100 text-purple-800",
+  ROC: "bg-blue-100 text-blue-800",
+  NLP: "bg-green-100 text-green-800",
+  "TF-IDF": "bg-orange-100 text-orange-800",
+  ML: "bg-blue-100 text-blue-800",
 };
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredProjects = projects.filter((project) =>
-    activeFilter === "all" ? true : project.categories.includes(activeFilter)
+    activeFilter === "all" ? true : project.categories.includes(activeFilter),
   );
 
   return (
     <section id="projects" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Projects
+          </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A showcase of my data science projects, from machine learning models to data visualizations
+            A showcase of my data science projects, from machine learning models
+            to data visualizations
           </p>
         </div>
 
@@ -121,14 +145,18 @@ export default function Projects() {
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {project.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
                       className={`px-2 py-1 rounded text-sm ${
-                        technologyColors[tech as keyof typeof technologyColors] || "bg-gray-100 text-gray-800"
+                        technologyColors[
+                          tech as keyof typeof technologyColors
+                        ] || "bg-gray-100 text-gray-800"
                       }`}
                     >
                       {tech}
@@ -136,11 +164,18 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex justify-between items-center">
-                  <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
+                  <Button
+                    variant="ghost"
+                    className="text-accent hover:text-accent/80 p-0"
+                  >
                     <ExternalLink className="h-4 w-4 mr-1" />
                     View Details
                   </Button>
-                  <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-800 p-1">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-gray-600 hover:text-gray-800 p-1"
+                  >
                     <Github className="h-4 w-4" />
                   </Button>
                 </div>
