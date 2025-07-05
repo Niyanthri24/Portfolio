@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -12,6 +10,7 @@ const projects = [
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     technologies: ["TensorFlow", "OpenCV", "Streamlit"],
     categories: ["ml", "cv"],
+    githubUrl: "https://github.com/Niyanthri24/brain-tumor-detection", // Add your actual GitHub repo URL
   },
   {
     title: "Youtube Comments Sentiment Analysis",
@@ -20,6 +19,8 @@ const projects = [
       "https://cdn.prod.website-files.com/614c82ed388d53640613982e/64f7989c55786e5b4de9b9cb_sentiment-analysis-explained.webp",
     technologies: ["BERT", "Streamlit", "Visuals"],
     categories: ["nlp", "ml"],
+    githubUrl:
+      "https://github.com/Niyanthri24/YouTube-Comment-Sentiment-Analyzer",
   },
   {
     title: "Spam Email Classification",
@@ -29,6 +30,8 @@ const projects = [
       "https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img/https://www.inboxally.com/wp-content/uploads/2024/09/a-computer-screen-filled-with-spam-warnings-and-alerts.png",
     technologies: ["Scikit", "BOW", "ROC"],
     categories: ["nlp"],
+    githubUrl: "https://github.com/Niyanthri24/spam-email-classification",
+    demoUrl: null,
   },
   {
     title: "IPL Score Prediction",
@@ -37,6 +40,8 @@ const projects = [
     image: "https://documents.iplt20.com/bcci/articles/1742574837_Website.png",
     technologies: ["Scikit", "Python", "FeatureEngineering"],
     categories: ["ml"],
+    githubUrl: "https://github.com/Niyanthri24/ipl-score-predictions",
+    demoUrl: null,
   },
   {
     title: "Weather Data Collection Data Pipeline",
@@ -46,6 +51,9 @@ const projects = [
       "https://wmo.int/sites/default/files/2023-06/MicrosoftTeams-image%20%2817%29.png",
     technologies: ["Python", "Databricks", "DeltaLake", "PySpark"],
     categories: ["viz", "ml"],
+    githubUrl:
+      "https://github.com/Niyanthri24/Weather-Data-Collection-Data-Pipeline",
+    demoUrl: null,
   },
   {
     title: "Fake News Detection",
@@ -55,6 +63,8 @@ const projects = [
       "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
     technologies: ["NLP", "TF-IDF", "ML"],
     categories: ["nlp"],
+    githubUrl: "https://github.com/Niyanthri24/fake-news-detection",
+    demoUrl: null,
   },
 ];
 
@@ -120,40 +130,44 @@ export default function Projects() {
         {/* Project Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {filters.map((filter) => (
-            <Button
+            <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              variant={activeFilter === filter.value ? "default" : "outline"}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeFilter === filter.value
-                  ? "bg-accent text-white hover:bg-accent/90"
-                  : "bg-white text-gray-700 hover:bg-gray-100"
+                  ? "bg-blue-600 text-white hover:bg-blue-700"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               {filter.label}
-            </Button>
+            </button>
           ))}
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card key={index} className="project-card bg-white overflow-hidden">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
-              <CardContent className="p-6">
+              <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-2 py-1 rounded text-sm ${
+                      className={`px-2 py-1 rounded text-xs font-medium ${
                         technologyColors[
                           tech as keyof typeof technologyColors
                         ] || "bg-gray-100 text-gray-800"
@@ -164,23 +178,21 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex justify-between items-center">
-                  <Button
-                    variant="ghost"
-                    className="text-accent hover:text-accent/80 p-0"
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm font-medium transition-colors"
                   >
-                    <ExternalLink className="h-4 w-4 mr-1" />
+                    <ExternalLink className="h-4 w-4" />
                     View Details
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-gray-600 hover:text-gray-800 p-1"
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
+                  </a>
+                  <span className="text-gray-600">
+                    <Github className="h-5 w-5" />
+                  </span>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

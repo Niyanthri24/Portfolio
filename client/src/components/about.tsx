@@ -71,10 +71,6 @@ export default function About() {
                 <h3 className="font-semibold mb-4">Quick Stats</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span>CGPA</span>
-                    <span className="font-semibold">8.40/10.0</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span>Projects</span>
                     <span className="font-semibold">10+</span>
                   </div>

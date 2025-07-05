@@ -2,7 +2,7 @@ import { Download, ExternalLink } from "lucide-react";
 import { FaLinkedin, FaGithub, FaKaggle, FaEnvelope } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { smoothScrollTo } from "@/lib/smooth-scroll";
-import profileImage from '../images/niyanthri.jpg';
+import profileImage from "../images/niyanthri.jpg";
 export default function Hero() {
   const handleDownloadResume = () => {
     // In a real implementation, this would trigger a file download
