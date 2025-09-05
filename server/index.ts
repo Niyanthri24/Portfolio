@@ -36,7 +36,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const port = 5001;
+const port =  process.env.PORT || 5001;
 
 async function startServer() {
   try {
