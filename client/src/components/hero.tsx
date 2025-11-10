@@ -5,9 +5,14 @@ import { smoothScrollTo } from "@/lib/smooth-scroll";
 import profileImage from "../images/niyanthri.jpg";
 export default function Hero() {
   const handleDownloadResume = () => {
-    // In a real implementation, this would trigger a file download
-    console.log("Download resume functionality would be implemented here");
-  };
+  const link = document.createElement("a");
+  link.href = "/Niyanthri_CV.pdf"; // Correct relative path (served from /public)
+  link.download = "Niyanthri_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   const handleViewProjects = () => {
     smoothScrollTo("#projects");
